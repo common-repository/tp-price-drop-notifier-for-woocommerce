@@ -1,0 +1,775 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.tppdn-box{
+    width: 100%;
+    float: left;
+    margin: 15px 0;
+    position: relative;
+}
+.tppdn-form{
+    
+}
+.tppdn-link-but{
+    width: 100%;
+    float: left;
+    margin: 0 0 15px 0;
+}
+.tppdn-form-row{
+    width: 100%;
+    float: left;
+    margin: 0 0 15px 0;
+}
+.tppdn-form-send{
+    width: 100%;
+    background: #a46497;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tppdn-form-send:hover{
+    background-color: #b96aa9;
+}
+.tppdn-form input[type=text]:focus,
+.tppdn-form input[type=email]:focus,
+.tppdn-form input[type=number]:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-bottom: 1px solid #000 !important;
+}
+.tppdn-form-type-toggle #tppdn-link-but{
+    cursor: pointer;
+    /* border-bottom:1px dashed #999; */
+    /* border-bottom:1px solid #999; */
+}
+.tppdn-form-type-toggle .tppdn-form{
+    display: none;
+}
+
+.tppdnlds-loading-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(255,255,255,0.8);
+    text-align: center;
+    display: none;
+}
+/* --------------------------------------------------------------------- */
+/* <div class="tppdnlds-ring"><div></div><div></div><div></div><div></div></div> */
+.tppdnlds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.tppdnlds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fcf;
+    border-radius: 50%;
+    animation: tppdnlds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fcf transparent transparent transparent;
+}
+.tppdnlds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.tppdnlds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.tppdnlds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes tppdnlds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* --------------------------------------------------------------------- */
+/* <div class="tppdnlds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> */
+.tppdnlds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.tppdnlds-roller div {
+    animation: tppdnlds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+.tppdnlds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fcf;
+    margin: -4px 0 0 -4px;
+}
+.tppdnlds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+.tppdnlds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+.tppdnlds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+.tppdnlds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+.tppdnlds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+.tppdnlds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+.tppdnlds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+.tppdnlds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+.tppdnlds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+.tppdnlds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+.tppdnlds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+.tppdnlds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+.tppdnlds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+.tppdnlds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+.tppdnlds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+.tppdnlds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+@keyframes tppdnlds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* --------------------------------------------------------------------- */
+/* <div class="tppdnlds-ellipsis"><div></div><div></div><div></div><div></div></div> */
+.tppdnlds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.tppdnlds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fcf;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.tppdnlds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: tppdnlds-ellipsis1 0.6s infinite;
+}
+.tppdnlds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: tppdnlds-ellipsis2 0.6s infinite;
+}
+.tppdnlds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: tppdnlds-ellipsis2 0.6s infinite;
+}
+.tppdnlds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: tppdnlds-ellipsis3 0.6s infinite;
+}
+@keyframes tppdnlds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes tppdnlds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes tppdnlds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+/* --------------------------------------------------------------------- */
+/* <div class="tppdnlds-facebook"><div></div><div></div><div></div></div> */
+.tppdnlds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.tppdnlds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fcf;
+    animation: tppdnlds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.tppdnlds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+.tppdnlds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+.tppdnlds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+@keyframes tppdnlds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%, 100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+/* --------------------------------------------------------------------- */
+/* <div class="tppdnlds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> */
+.tppdnlds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.tppdnlds-spinner div {
+    transform-origin: 40px 40px;
+    animation: tppdnlds-spinner 1.2s linear infinite;
+}
+.tppdnlds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fcf;
+}
+.tppdnlds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+}
+.tppdnlds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+}
+.tppdnlds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+}
+.tppdnlds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+}
+.tppdnlds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+}
+.tppdnlds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+}
+.tppdnlds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+}
+.tppdnlds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+}
+.tppdnlds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+}
+.tppdnlds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+}
+.tppdnlds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+}
+.tppdnlds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+}
+@keyframes tppdnlds-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* --------------------------------------------------------------------- */
+/* <div class="tppdnlds-ripple"><div></div><div></div></div> */
+.tppdnlds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.tppdnlds-ripple div {
+    position: absolute;
+    border: 4px solid #fcf;
+    opacity: 1;
+    border-radius: 50%;
+    animation: tppdnlds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.tppdnlds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes tppdnlds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------------------------------- */
+
+/* .tppdn-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+} */
+
+/* .tppdn-form h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+} */
+
+.tppdn-form .user-box {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.tppdn-form .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+.tppdn-form .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.rtl .tppdn-form .user-box label{
+    right: 0;
+    left: auto;
+}
+.rtl .tppdn-form .user-box input:focus ~ label,
+.rtl .tppdn-form .user-box input:valid ~ label {
+    right: 0;
+    left: auto;
+}
+
+.tppdn-form .user-box input:focus ~ label,
+.tppdn-form .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #a46497;
+    font-size: 12px;
+}
+
+.tppdn-form form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #a46497;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.tppdn-form a:hover {
+    background: #a46497;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a46497,
+                0 0 25px #a46497,
+                0 0 50px #a46497,
+                0 0 100px #a46497;
+}
+
+.tppdn-form a span {
+    position: absolute;
+    display: block;
+}
+
+.tppdn-form a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a46497);
+    animation: btn-anim1 1s linear infinite;
+}
+
+.rtl .tppdn-form a span:nth-child(1){
+    right: -100%;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.tppdn-form a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a46497);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.tppdn-form a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #a46497);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.tppdn-form a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #a46497);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+.tpcartwrap-archive h2{
+    font-size: 2rem;
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------- */ 
+
+.tpcartwrap {}
+
+.tpcartwrapsclose,
+.tpcartwrapsclose-archive {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.tpcartwrapshow,
+.tpcartwrapshow-archive {
+    cursor: pointer;
+}
+
+.tpcartwrapbg {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.tpcartwrapform {
+    background: #fff;
+    max-width: 600px;
+    width: calc(100% - 30px);
+    height: calc(100% - 90px);
+    margin: 60px 15px;
+    padding: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+@media screen and (min-width: 748px) {
+    .tpcartwrapform {
+        width: calc(100% - 30px);
+        /* height: 450px; */
+        height: auto;
+        margin: -225px 0 0 -300px;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+.tppdn-required-validation{
+    width: 100%;
+    float: left;
+    color: #e01c1c;
+    border: 1px solid;
+    text-align: center;
+    padding: 5px;
+}
+
+.tppdn_user_products table td, .tppdn_user_products table th{
+    text-align: center;
+    padding: 10px;
+}
+.tppdn_user_products img{
+    width: 40px;
+}
+
+/* ----------------------------------------------------- */
+/* Customize the label (the container) */
+.tppdncontainer {
+    float: left;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+}
+.tppdncontainer .tppdncheckmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    margin: -10px 0 0 0;
+}
+.rtl .tppdncontainer {
+    float: right;
+    padding-left: 0;
+    padding-right: 30px;
+}
+.rtl .tppdncheckmark{
+    right: 0;
+    left: auto;
+}
+
+/* Hide the browser's default checkbox */
+.tppdncontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.tppdncheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.tppdncontainer:hover input ~ .tppdncheckmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.tppdncontainer input:checked ~ .tppdncheckmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.tppdncheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.tppdncontainer input:checked ~ .tppdncheckmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.tppdncontainer .tppdncheckmark:after {
+    left: 8px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* ----------------------------------------------------- */
+
+.tppdn_notifier_button{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.tppdn_notifier_button .tppdn_notifier_button_track,
+.tppdn_notifier_button .tppdn_notifier_button_stock{
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 5px 0 0;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.tppdn_notifier_button .tppdn_notifier_button_track{
+    background: crimson;
+}
+
+.tppdn_notifier_button .tppdn_notifier_button_stock{
+    background: darkcyan;
+}
+.tppdn_display_none_price{
+    display: none !important;
+}
